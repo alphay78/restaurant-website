@@ -1,31 +1,51 @@
 /* Menu.css */
 .navbar-custom {
-  padding: 0.5rem 1rem;
-  background-color: #f8f9fa; /* Light background color */
-  border-bottom: 1px solid #e5e5e5; /* Light border for separation */
+  background-color: #fff4ea; /* Soft pastel background for the navbar */
+  padding: 10px 20px; /* Padding for a comfortable navbar height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle depth effect */
 }
 
-.navbar-custom .brand-name {
-  font-family: 'Cursive', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #343a40; /* Darker text color */
+.navbar-brand {
+  font-family: 'Lora', serif; /* Elegant serif font for the brand name */
+  font-size: 1.8rem; /* Larger font size for prominence */
+  color: #c96868; /* Coral color for the brand name */
+  text-transform: uppercase; /* Uppercase letters for sophistication */
 }
 
-.navbar-custom .navbar-nav .nav-link {
-  color: #007bff; /* Blue color for nav links */
-  margin-right: 1rem; /* Spacing between nav items */
+.navbar-nav .nav-link {
+  font-family: 'Lora', serif; /* Matching font family for consistency */
+  font-size: 1rem; /* Standard font size */
+  margin: 0 15px; /* Spacing between menu items */
+  color: #7eacb5; /* Teal color for nav links */
+  transition: color 0.3s ease; /* Smooth color transition */
+  text-decoration: none; /* Remove underline */
 }
 
-.navbar-custom .navbar-nav .nav-link:hover {
-  color: #0056b3; /* Darker blue on hover */
+.navbar-nav .nav-link:hover {
+  color: #c96868; /* Coral color on hover */
 }
 
-.logo-container {
-  margin-left: auto; /* Push logo to the right */
+.navbar-nav .nav-button {
+  font-family: 'Lora', serif; /* Consistent font family */
+  font-size: 1rem; /* Standard font size */
+  margin: 0 15px; /* Spacing between items */
+  padding: 8px 20px; /* Padding around button text */
+  color: #fff4ea; /* Light cream text color */
+  background-color: #7eacb5; /* Teal color for the button */
+  border: none;
+  border-radius: 8px; /* Rounded corners for button */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
-.logo {
-  height: 40px; /* Adjust the size of the logo */
-  width: auto;
+.navbar-nav .nav-button:hover {
+  background-color: #c96868; /* Coral color on hover */
+  color: #fff4ea; /* Light cream text color on hover */
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #c96868; /* Coral color for toggler icon */
 }
