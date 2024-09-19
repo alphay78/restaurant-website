@@ -1,16 +1,20 @@
-// src/components/About.js
 import React from "react";
 
-function About() {
+const About = () => {
   return (
-    <div>
-      <h1>About Us</h1>
+    <div className="about-container">
+      <h1>About Alpha Pastry</h1>
       <p>
-        Here you can find out more about our restaurant's history, mission, and
-        team.
+        Welcome to Alpha Pastry, where every bite is a delight! Our passion is
+        to provide delicious, freshly baked pastries and baked goods that bring
+        joy to our customers.
+      </p>
+      <p>
+        At Alpha, we use the finest ingredients and traditional baking methods
+        to create treats that are perfect for any occasion.
       </p>
     </div>
   );
-}
+};
 
 export default About;

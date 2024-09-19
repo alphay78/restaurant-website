@@ -1,33 +1,37 @@
-import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import "./Menu.css"; // Ensure the path is correct
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
-const NavBar = () => {
+const Navbar = () => {
   return (
-    <Navbar bg="light" expand="lg" className="navbar-custom">
-      <Navbar.Brand href="#home" className="brand-name">
-        Alpha
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#menu">Menu</Nav.Link>
-          <Nav.Link href="#about">About</Nav.Link>
-          <Nav.Link href="#reservation">Reservation</Nav.Link>
-          <Nav.Link href="#contact">Contact</Nav.Link>
-          <Nav.Link href="#admin">Admin Panel</Nav.Link>
-        </Nav>
-        <Navbar.Brand href="#home" className="logo-container">
-          <img
-            src={require("../assets/AlphaLogo.png")}
-            alt="Alpha Logo"
-            className="logo"
-          />
-        </Navbar.Brand>
-      </Navbar.Collapse>
-    </Navbar>
+    <nav className="navbar navbar-expand-lg navbar-custom">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">Alpha Patisserie & Bakery</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/our-story">Our Story</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/our-treats">Our Treats</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/find-us">Find Us</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact Us</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 };
 
-export default NavBar;
+export default Navbar;
