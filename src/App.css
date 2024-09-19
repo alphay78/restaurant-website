@@ -1,28 +1,25 @@
-/* App.css */
-.landing-section {
-  background-color: #fff4ea; /* Light background color */
-  height: 100vh; /* Full viewport height */
+/* Ensure the body takes up the full height of the viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Main container styling */
+.main-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.welcome-text {
-  font-family: 'Lora', serif; /* Elegant serif font */
-  color: #7eacb5; /* Teal color for text */
-}
-
-.welcome-text h1 {
-  font-size: 2.5rem; /* Size for main heading */
-}
-
-.welcome-text h2 {
-  font-size: 4rem; /* Size for brand name */
-  color: #c96868; /* Coral color for brand name */
-}
-
-.welcome-text h3 {
-  font-size: 2rem; /* Size for subtitle */
-  color: #7eacb5; /* Teal color for subtitle */
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+  min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+  max-width: 1200px; /* Set a maximum width for the content */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Optional padding */
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
 }
