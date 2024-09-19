@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import Navbar from "./components/Navbar";
+import "./styles/Menu.css"; // Import your CSS file
 
 function App() {
   return (
-    <div className="App">
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <h1>Hello World</h1>
+    <div>
+      <Navbar />
+      <div id="home">
+        <h1>Home</h1>
+        <p>Welcome to our website!</p>
+      </div>
+      <div id="menu">
+        <h1>Menu</h1>
+        <p>Explore our delicious menu options.</p>
+      </div>
+      <div id="about">
+        <h1>About</h1>
+        <p>Learn more about us.</p>
+      </div>
+      <div id="reservation">
+        <h1>Reservation</h1>
+        <p>Book a table with us.</p>
+      </div>
+      <div id="contact">
+        <h1>Contact</h1>
+        <p>Get in touch with us.</p>
+      </div>
+      <div id="admin">
+        <h1>Admin Panel</h1>
+        <p>Admin login and management.</p>
+      </div>
     </div>
   );
 }
