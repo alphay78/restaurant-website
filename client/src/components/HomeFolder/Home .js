@@ -13,7 +13,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home-container">
+    <div className="home-container h=100%">
       <div className={`home-content ${showContent ? "show" : ""}`}>
         <h1>Welcome to </h1>
         <h2>Alpha</h2>
