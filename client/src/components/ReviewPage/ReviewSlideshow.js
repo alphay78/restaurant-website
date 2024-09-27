@@ -1,18 +1,19 @@
 import React from "react";
-import Slider from "react-slick";
-import "./ReviewSlide.css"; 
+import Slider from "react-slick"; 
+import "./ReviewPage.css"; 
+
 const reviews = [
   "Amazing ambiance—the best café setting in Addis.",
   "So gorgeous and calming. It makes me want to stay.",
   "A place to be.",
   "I’d like more fasting cake variety, like apple pie and fruit tart.",
-  "KOBA croissant, excellent.",
+  "ALPHA croissant, excellent.",
   "If you have some food for diabetic clients and other special needs, that would be great.",
   "I highly recommend this place.",
   "I love the white and dark chocolate muffins.",
-  "Some KOBA bees.",
+  "Some ALPHA bees.",
   "Vegetable focaccia is my favorite. It is perfect.",
-  "Kalkidan makes us feel at home. She is so good at her job.",
+  "Alpha makes us feel at home. She is so good at her job.",
   "The best in town.",
 ];
 

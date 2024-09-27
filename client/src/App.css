@@ -1,4 +1,4 @@
-/* Ensure the body takes up the full height of the viewport */
+/* Ensure the body takes up the full height of the viewport
 html, body {
   margin: 0;
   padding: 0;
@@ -11,15 +11,13 @@ html, body {
   height: 100%;
 }
 
-/* Main container styling */
+
 .main-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the content horizontally */
-  justify-content: center; /* Center the content vertically */
-  min-height: 100vh; /* Ensure it takes up at least the full viewport height */
-  max-width: 1200px; /* Set a maximum width for the content */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px; /* Optional padding */
-  box-sizing: border-box; /* Ensure padding is included in width calculations */
-}
+  align-items: center; 
+  min-height: 100vh; 
+  max-width: 1200px; 
+  padding: 20px; 
+  box-sizing: border-box; 
+} */
