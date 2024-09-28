@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import "./ContactUs.css";
+import "./ContactUs.css"; 
 
-const ContactUs = () => {
+const OrderForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    cakeType: "",
+    cakeSize: "",
+    orderDate: "",
   });
 
   const handleChange = (e) => {
@@ -16,20 +18,35 @@ const ContactUs = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
+    console.log("Order Data Submitted:", formData);
+
+    await fetch('http://localhost:3000/orders', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    
+    setFormData({
+      name: "",
+      email: "",
+      cakeType: "",
+      cakeSize: "",
+      orderDate: "",
+    });
   };
 
   return (
-    <div className="contact-container">
-      <h1 className="contact-title">We'd Love to Hear From You!</h1>
-      <p className="contact-description">
-        Fill out the form below to get in touch with us or ask about our
-        delicious pastries!
+    <div className="order-container">
+      <h1 className="order-title">Place Your Order!</h1>
+      <p className="order-description">
+        Fill out the form below to order your favorite cake!
       </p>
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form className="order-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <input
             type="text"
@@ -51,20 +68,54 @@ const ContactUs = () => {
           />
         </div>
         <div className="form-group">
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
+          <select
+            name="cakeType"
+            value={formData.cakeType}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled>
+              Select Cake Type
+            </option>
+            <option value="Chocolate Cake">Chocolate Cake</option>
+            <option value="Vanilla Cake">Vanilla Cake</option>
+            <option value="Red Velvet Cake">Red Velvet Cake</option>
+            <option value="Lemon Cake">Lemon Cake</option>
+            <option value="Carrot Cake">Carrot Cake</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <select
+            name="cakeSize"
+            value={formData.cakeSize}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled>
+              Select Cake Size
+            </option>
+            <option value="1 kilo">1 kilo</option>
+            <option value="2 kilos">2 kilos</option>
+            <option value="3 kilos">3 kilos</option>
+            <option value="4 kilos">4 kilos</option>
+            <option value="5 kilos">5 kilos</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <input
+            type="date"
+            name="orderDate"
+            value={formData.orderDate}
             onChange={handleChange}
             required
           />
         </div>
         <button type="submit" className="submit-button">
-          Send Message
+          Place Order
         </button>
       </form>
     </div>
   );
 };
 
-export default ContactUs;
+export default OrderForm;

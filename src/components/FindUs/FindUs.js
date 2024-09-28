@@ -1,6 +1,6 @@
 import React from "react";
 import "./FindUs.css";
-import findUsImage from "../../assets/FindUs.jpg"; 
+import findUsImage from "../../assets/FindUs.jpg";
 
 const FindUs = () => {
   return (
@@ -18,26 +18,22 @@ const FindUs = () => {
         </div>
       </div>
 
-      
       <div className="locations animate-slide-up">
         <h2 className="section-title">Our Locations</h2>
         <div className="location">
           <h3>Get Cozy at</h3>
           <p>ALPHA Sanford</p>
           <p>+251 941 000 022</p>
-          <button className="location-button">Go To Map</button>
         </div>
         <div className="location">
           <h3>Go Social at</h3>
           <p>ALPHA Bole Atlas</p>
           <p>+251 900 989 898</p>
-          <button className="location-button">Go To Map</button>
         </div>
         <div className="location">
           <h3>Take a Break at</h3>
           <p>ALPHA 4 Killo</p>
           <p>+251 900 898 989</p>
-          <button className="location-button">Go To Map</button>
         </div>
       </div>
 
